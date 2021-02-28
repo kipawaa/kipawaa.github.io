@@ -1,4 +1,4 @@
 # MATC46
 
 ## Assignments:
-[test3](resources/c46.py)
+[Assignment 1](A1.pdf)
