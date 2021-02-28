@@ -1,2 +1,5 @@
-## TITLE?
-Not sure how this works! just trying things out to see what happens
+# this should be a header
+this should be normal text
+
+## this should be an h2 header?
+*this should be italicized*
