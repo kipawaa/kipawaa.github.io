@@ -6,3 +6,5 @@ this should be normal text
 
 # Things are working!
 # I think things require a space
+
+[a link to my projects page](pages/projects-page.md)
