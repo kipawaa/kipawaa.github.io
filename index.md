@@ -1,11 +1,6 @@
-# this should be a header (from index.md)
-this should be normal text
+# Main Title
 
-## this should be an h2 header?
-*this should be italicized*
+##1. Projects Title
+[pages/projects-page.md](pages/projects-page.md)
 
-# Things are working!
-# I think things require a space
-
-[a link to my projects page](pages/projects-page.md)
 [a link to my classes page](pages/classes-page.md)
