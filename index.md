@@ -8,3 +8,4 @@ this should be normal text
 # I think things require a space
 
 [a link to my projects page](pages/projects-page.md)
+[a link to my classes page](pages/classes-page.md)
