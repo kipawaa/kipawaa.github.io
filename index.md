@@ -3,7 +3,7 @@
 ## About
 I'm a second year student at UTSC taking Mathematics specialist. Excited to continue learning!
 
-## [Projects](pages/projects-page.md)
+## [Projects](pages/projects-page.Rmd)
 
 ### [N-Body](https://github.com/kipawaa/N-Body)
 
@@ -11,7 +11,13 @@ I'm a second year student at UTSC taking Mathematics specialist. Excited to cont
 
 ### [Number Theory](https://github.com/kipawaa/Little-Projects/tree/master/Python/Fun%20With%20Numbers)
 
-## [Classes](pages/classes-page.md)
+
+## TA-related
+
+Currently TAing CSCA48!
+
+
+## Current Classes:
 
 MATC46: Differential Equations II
 
