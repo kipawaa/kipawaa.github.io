@@ -2,14 +2,14 @@
 
 ## Current:
 
-### MATC46
+### MATC46: Differential Equations II
 
-### MATC15
+### MATC15: Introduction to Number Theory
 
-### MATB43
+### MATB43: Introduction to Real Analysis
 
-### MATB42
+### MATB42: Techniques of Calculus of Several Variables II
 
-### EESA06
+### EESA06: Introduction to Planet Earth
 
 ## Past:
