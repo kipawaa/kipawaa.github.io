@@ -1,7 +1,7 @@
 # My Projects:
 
-N-Body simulations
+## [N-Body Simulation](https://github.com/kipawaa/N-Body)
 
-Mandelbrot Visualizer
+## [Perlin Noise](https://github.com/kipawaa/Perlin-Noise)
 
-etc.
+## [Sudoku Solver](https://github.com/kipawaa/Sudoku)
