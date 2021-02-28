@@ -2,7 +2,7 @@
 
 ## Current:
 
-### MATC46: Differential Equations II
+### [MATC46: Differential Equations II](/classes/MATC46.md)
 
 ### MATC15: Introduction to Number Theory
 
