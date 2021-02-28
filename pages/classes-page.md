@@ -1,15 +1,11 @@
-# Classes:
+# Current Classes:
 
-## Current:
+MATC46: Differential Equations II
 
-### MATC46: Differential Equations II
+MATC15: Introduction to Number Theory
 
-### MATC15: Introduction to Number Theory
+MATB43: Introduction to Real Analysis
 
-### MATB43: Introduction to Real Analysis
+MATB42: Techniques of Calculus of Several Variables II
 
-### MATB42: Techniques of Calculus of Several Variables II
-
-### EESA06: Introduction to Planet Earth
-
-## Past:
+EESA06: Introduction to Planet Earth

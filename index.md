@@ -1,7 +1,7 @@
 # River McCubbin
 
 ## About
-I'm a second year student at UTSC taking Mathematics specialist. Interested in number theory and excited to continue learning!
+I'm a second year student at UTSC taking Mathematics specialist. Excited to continue learning!
 
 ## [Projects](pages/projects-page.md)
 
@@ -12,3 +12,5 @@ I'm a second year student at UTSC taking Mathematics specialist. Interested in n
 ### [Number Theory](https://github.com/kipawaa/Little-Projects/tree/master/Python/Fun%20With%20Numbers)
 
 ## [Classes](pages/classes-page.md)
+
+
