@@ -3,7 +3,7 @@
 ## About
 I'm a second year student at UTSC taking Mathematics specialist. Excited to continue learning!
 
-## [Projects](pages/projects-page.Rmd)
+## [Projects](pages/projects.md)
 
 ### [N-Body](https://github.com/kipawaa/N-Body)
 
