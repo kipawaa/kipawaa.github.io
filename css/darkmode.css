@@ -1,0 +1,65 @@
+/* general aesthetic */
+body {
+        font-family: Gill Sans, sans-serif;
+        background-color: #282D30;
+}
+
+/**************** sidebar ********************/
+.sidenav {
+        height: 100%;
+        width: 9%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #198DE0;
+        overflow-x: hidden;
+}
+
+.sidenav a {
+        padding: 16px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 24px;
+        color: #282d30;
+        display: block;
+}
+
+.sidenav a:visited {
+        color: #282d30;
+}
+
+.sidenav a:hover {
+        color: #e6e6e6;
+}
+
+.main {
+        margin-left: 160px;
+        font-size: 26px;
+        padding: 0px 20px 0px 20px;
+}
+
+/**************** headers ****************/
+h1, h2, h3, h4, h5, h6 {
+        color: #198DE0;
+        text-align: left;
+}
+
+/*************** paragraph ****************/
+p {
+        color: #e6e6e6;
+        text-align: left;
+}
+
+/************** text fields **************/
+label {
+        color: #e6e6e6;
+}
+
+/**************** links *******************/
+a {
+        color: #1673b4;
+}
+
+a:hover {
+        color: #e6e6e6;
+}
