@@ -6,9 +6,7 @@ function isPrime(num=null) {
         }
 
         if (num < 2) {
-                if (result) {
-                        result.textContent = "Result: " + num + " is not prime";
-                }
+                if (result) result.textContent = "Result: " + num + " is not prime";
                 return false;
         }
 
@@ -21,32 +19,34 @@ function isPrime(num=null) {
                 }
         }
 
-        if (result) {
-                result.textContent = "Result: " + num + " is prime!";
-        }
+        if (result) result.textContent = "Result: " + num + " is prime!";
         return true;
 }
 
 
-function getFactors() {
-        var num = document.getElementById('num').value;
-        var result = document.getElementById('result');
+function getFactors(num=null) {
+        if (!num) {
+                var num = document.getElementById('num').value;
+                var result = document.getElementById('result');
+        }
         var factors = [];
 
         for (var i = 0; i <= num; i++) {
                 if (num % i == 0) factors.push(i);
         }
 
-        result.textContent = "Result: The factors of " + num + " are " + arrayToString(factors);
+        if (result) result.textContent = "Result: The factors of " + num + " are " + arrayToString(factors);
         return factors;
 }
 
 
-function getPrimeFactors() {
-        var num = document.getElementById('num').value;
-        var result = document.getElementById('result');
+function getPrimeFactors(num=null) {
+        if (!num) {
+                var num = document.getElementById('num').value;
+                var result = document.getElementById('result');
+        }
 
-        var factors = getFactors();
+        var factors = getFactors(num);
 
         var prime_factors = [];
 
@@ -54,8 +54,38 @@ function getPrimeFactors() {
                 if (isPrime(factors[i])) prime_factors.push(factors[i]);
         }
 
-        result.textContent = "Result: The prime factors of " + num + " are: " + arrayToString(prime_factors);
+        if (result) result.textContent = "Result: The prime factors of " + num + " are: " + arrayToString(prime_factors);
         return prime_factors;
+}
+
+
+function product(arr) {
+        var total = 1;
+
+        for (var i = 0; i < arr.length; i++) {
+                total *= arr[i];
+        }
+
+        return total;
+}
+
+
+function getPrimeDecomposition(num=null) {
+        if (!num) {
+                var num = document.getElementById('num').value;
+                var result = document.getElementById('result');
+        }
+
+        var decomp = getPrimeFactors(num);
+
+        while (product(decomp) < num) {
+                var newFactors = getPrimeFactors(Math.floor(num / product(decomp)));
+                decomp = decomp.concat(newFactors);
+        }
+
+        decomp.sort();
+        if (result) result.textContent = "The prime decomposition of " + num + " is " + arrayToString(decomp);
+        return decomp;
 }
 
 
