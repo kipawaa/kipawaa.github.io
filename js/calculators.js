@@ -96,6 +96,28 @@ function phi(num=null) {
     return total;
 }
 
+function mobius(num=null) {
+    if (!num) {
+        var num = document.getElementById('num').value;
+        var result = document.getElementById('redult');
+    }
+
+    // this comes back sorted
+    var decomp = getPrimeDecomposition(num);
+
+    // so we can check if the next element is the same as the current to find duplicates
+    for (var i = 0; i < decomp.length; i++) {
+        if (decomp[i] == decomp[i+1]) {
+            if (result) result.textContent = "\u03BC(" + num + ") = 0";
+            return 0;
+        }
+    }
+
+    var val = (-1)**(decomp.len);
+    if (result) result.textContent = "\u03BC(" + num + ") = " val;
+    return val;
+}
+
 
 function arrayToString(arr) {
     var str = '';
