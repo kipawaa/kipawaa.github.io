@@ -80,6 +80,22 @@ function getPrimeDecomposition(num=null) {
     return decomp;
 }
 
+function phi(num=null) {
+    if (!num) {
+        var num = document.getElementById('num').value;
+        var result = document.getElementById('result');
+    }
+
+    var total = 0;
+
+    for (var i = 2; i < num; i++) {
+        if (num % i != 0) total ++;
+    }
+
+    if (result) result.textContent = "\u03C6(" + num + ") = " + total;
+    return total;
+}
+
 
 function arrayToString(arr) {
     var str = '';
