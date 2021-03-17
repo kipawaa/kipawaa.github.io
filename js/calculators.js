@@ -80,7 +80,7 @@ function getPrimeDecomposition(num=null) {
     return decomp;
 }
 
-function phi(num=null) {
+function getPhi(num=null) {
     if (!num) {
         var num = document.getElementById('num').value;
         var result = document.getElementById('result');
@@ -96,25 +96,27 @@ function phi(num=null) {
     return total;
 }
 
-function mobius(num=null) {
+function getMobius(num=null) {
     if (!num) {
         var num = document.getElementById('num').value;
-        var result = document.getElementById('redult');
+        var result = document.getElementById('result');
     }
+    console.log('before');
 
     // this comes back sorted
     var decomp = getPrimeDecomposition(num);
 
     // so we can check if the next element is the same as the current to find duplicates
-    for (var i = 0; i < decomp.length; i++) {
+    for (var i = 0; i < decomp.length - 1; i++) {
         if (decomp[i] == decomp[i+1]) {
             if (result) result.textContent = "\u03BC(" + num + ") = 0";
             return 0;
         }
     }
+    console.log('after');
 
-    var val = (-1)**(decomp.len);
-    if (result) result.textContent = "\u03BC(" + num + ") = " val;
+    var val = (-1)**(decomp.length);
+    if (result) result.textContent = "\u03BC(" + num + ") = " + val;
     return val;
 }
 
