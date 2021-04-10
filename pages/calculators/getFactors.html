@@ -22,10 +22,10 @@
 
         <div class = "main">
             <h1>Calculate Factors</h1>
-            <form>
+            <form onsubmit = "return false">
                 <label for = "num">Input a number to find its factors!</label>
                 <input type = "text" id = "num" name = "num">
-                <button type = "button" onclick = "getFactors()">Check!</button>
+                <button type = "submit" onclick = "getFactors()" id = "button">Check!</button>
             </form>
             <p id = "result">Result: </p>
             <p>This calculator find the factors of a number <i>n</i>. The factors of <i>n</i> are the numbers between 0 and <i>n</i> that divide <i>n</i>.</p>

@@ -7,7 +7,7 @@ body {
 /**************** sidebar ********************/
 .sidenav {
         height: 100%;
-        width: 25%;
+        width: 22%;
         position: fixed;
         z-index: 1;
         top: 0;
@@ -33,7 +33,7 @@ body {
 }
 
 .main {
-        margin-left: 160px;
+        margin-left: 22%;
         font-size: 26px;
         padding: 0px 20px 0px 20px;
 }
@@ -64,9 +64,42 @@ a:hover {
         color: #e6e6e6;
 }
 
-
 @media (min-width:800px) {
         .sidenav {
+                width:17%;
+        }
+
+        .main {
+                margin-left: 17%;
+        }
+}
+
+@media (min-width:1000px) {
+        .sidenav {
+                width: 15%;
+        }
+
+        .main {
+                margin-left: 15%;
+        }
+}
+
+@media (min-width:1100px) {
+        .sidenav {
+                width: 12%;
+        }
+
+        .main {
+                margin-left: 12%;
+        }
+}
+
+@media (min-width:1400px) {
+        .sidenav {
                 width: 9%;
+        }
+
+        .main {
+                margin-left: 9%;
         }
 }

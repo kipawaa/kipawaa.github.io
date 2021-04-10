@@ -22,10 +22,10 @@
 
         <div class = "main">
             <h1>Mobius Function Calculator</h1>
-            <form>
+            <form onsubmit = "return false">
                 <label for = "num">Input a number to find the mobius value!</label>
                 <input type = "text" id = "num" name = "num">
-                <button type = "button" onclick = "getMobius()">Check!</button>
+                <button type = "submit" onclick = "getMobius()">Check!</button>
             </form>
             <p id = "result">Result: </p>
             <p>This calculator determines the mobius function's value at <i>n</i>. The mobius function is often thought of as a square-detector. It outputs 0 if <i>n</i> is divisible by a prime squared. If a number is "square-free" (is not divisible by a prime squared) then the mobius function will return 1 if <i>n</i> has an even number of prime factors, and -1 if <i>n</i> has an odd number of prime factors.

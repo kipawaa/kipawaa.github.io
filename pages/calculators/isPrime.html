@@ -22,10 +22,10 @@
 
         <div class = "main">
             <h1>Primality Test</h1>
-            <form>
+            <form onsubmit = "return false">
                 <label for = "num">Input a number to see if it is prime!</label>
                 <input type = "text" id = "num" name = "num">
-                <button type = "button" onclick = "isPrime()">Check!</button>
+                <button type = "submit" onclick = "isPrime()">Check!</button>
             </form>
             <p id = "result">Result: </p>
             <p>This calculator determines whether a number <i>n</i> is prime. <i>n</i> is considered prime if 1 and <i>n</i> are the only numbers between 0 and <i>n</i> that divide <i>b</i>.
