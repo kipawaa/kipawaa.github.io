@@ -1,8 +1,8 @@
 function isPrime(num=null) {
     // if num is not declared then assume this is being called by an html page, otherwise run like a normal function
     if (!num) {
-        var num = document.getElementById('num').value
-        var result = document.getElementById('result')
+        var num = document.getElementById('num').value;
+        var result = document.getElementById('result');
     }
 
     if (num < 2) {
