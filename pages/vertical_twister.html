@@ -13,92 +13,29 @@
     <body>
         <div style="font-size:16px">
             <h1>Vertical Twister</h1>
-            <p>Select Your Colours</p>
-            <label for="colour1">Colour 1:</label>
-            <select name="colour1" id="colour1">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="teal">Teal</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
-            </select>
-            <br></br>
 
-            <label for="colour2">Colour 2:</label>
-            <select name="colour2" id="colour2">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="teal">Teal</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
+            <label for="numColours">Number of colours: </label>
+            <select name="numColours" id="numColours">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
             </select>
-            <br></br>
+            <button type="submit" onclick="addColourOptions()">Add Colours!</button>
 
-            <label for="colour3">Colour 3:</label>
-            <select name="colour3" id="colour3">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="teal">Teal</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
-            </select>
-            <br></br>
-
-            <label for=colour4">Colour 4:</label>
-            <select name="colour4" id="colour4">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="teal">Teal</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
-            </select>
             <br></br>
             
-            <label for=colour5">Colour 5:</label>
-            <select name="colour5" id="colour5">
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-                <option value="aquamarine">Aquamarine</option>
-                <option value="blue">Blue</option>
-                <option value="purple">Purple</option>
-                <option value="pink">Pink</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-                <option value="black">Black</option>
-                <option value="brown">Brown</option>
-            </select>
+            <label for="randomLimbs">Randomize limbs?</label>
+            <input type="checkbox" id="randomLimbs" name="randomLimbs" value="true">
+            <p> select this to move a random limb, otherwise it will rotate: left hand, right hand, left foot, right foot</p>
+
             <br></br>
-            
+
+            <div id="colourDiv"></div>
+
+            <br></br>
 
             <form onsubmit = "return false">
                 <button type="submit" onclick = "getMove()">Next Move!</button>
@@ -107,6 +44,9 @@
             <p id="result"></p>
         </div>
 
+
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     </body>
 
 </html>

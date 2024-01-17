@@ -1,12 +1,44 @@
-// generates the next move for vertical twister and updates the page accordingly
-function getMove() {
-    let colour1 = document.getElementById("colour1").value;
-    let colour2 = document.getElementById("colour2").value;
-    let colour3 = document.getElementById("colour3").value;
-    let colour4 = document.getElementById("colour4").value;
-    let colour5 = document.getElementById("colour5").value;
+const root = ReactDOM.createRoot(document.getElementById("colourDiv"));
+const colours = ["red", "orange", "yellow", "green", "teal", "blue", "purple", "pink", "white", "grey", "black", "brown"];
 
-    let colours = [colour1, colour2, colour3, colour4, colour5];
+function generateColourSelector(props) {
+    return <select name={props.name} id={props.id}>
+        <option value=colours[0]>colours[0].toString()</option>
+    </select>
+        
+}
+
+// generates the next move for vertical twister and updates the page accordingly
+function addColourOptions() {
+    var numColours = document.getElementById("numColours").value;
+
+
+    for (let i = 0; i < numColours; i++) {
+        let select = document.createElement("select");
+        select.name = "colour" + (i + 1);
+        select.id = "colour" + (i + 1);
+
+        for (let colour of colours) {
+            let option = document.createElement("option");
+            option.value = colour;
+            option.text = colour;
+            select.appendChild(option);
+        }
+
+        let label = document.createElement("label");
+        label.innerHTML = "Choose Colour " + (i + 1) + ": ";
+        label.htmlFor = "colour" + (i + 1);
+
+        document.getElementById("colourDiv").appendChild(label).appendChild(select);
+    }
+}
+
+function getMove() {
+    // get all colour choice values
+    
+
+    // put colours in here
+    let colours = [];
     let limbs = ["Left Hand", "Right Hand", "Left Foot", "Right Foot"];
 
     let colour = colours[Math.floor(Math.random() * 5)];
