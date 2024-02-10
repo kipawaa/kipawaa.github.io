@@ -1,10 +1,9 @@
-const root = ReactDOM.createRoot(document.getElementById("colourDiv"));
 const colours = ["red", "orange", "yellow", "green", "teal", "blue", "purple", "pink", "white", "grey", "black", "brown"];
+const limbs = ["Left Hand", "Right Hand", "Left Foot", "Right Foot"];
+let prev_limb = 0;
 
 function generateColourSelector(props) {
-    return <select name={props.name} id={props.id}>
-        <option value=colours[0]>colours[0].toString()</option>
-    </select>
+    return "<select name={props.name} id={props.id}><option value=colours[0]>colours[0].toString()</option></select>"
         
 }
 
@@ -18,6 +17,7 @@ function addColourOptions() {
         select.name = "colour" + (i + 1);
         select.id = "colour" + (i + 1);
 
+        // update html with colour options
         for (let colour of colours) {
             let option = document.createElement("option");
             option.value = colour;
@@ -33,16 +33,29 @@ function addColourOptions() {
     }
 }
 
+function getCurrentColours() {
+    let current_colours = [];
+    for (i = 0; i < 6; i++) {
+        selector = document.getElementById("colour" + i);
+        if (selector) {
+            current_colours.push(selector.value);
+        }
+    }
+    return current_colours;
+}
+
 function getMove() {
-    // get all colour choice values
-    
+    console.log("getting move");
+    // get possible colour choices
+    let current_colours = getCurrentColours();
 
-    // put colours in here
-    let colours = [];
-    let limbs = ["Left Hand", "Right Hand", "Left Foot", "Right Foot"];
+    // randomly select a colour and limb
+    let colour = current_colours[Math.floor(Math.random() * current_colours.length)];
+    let limb = document.getElementById("randomLimbs").checked ? limbs[Math.floor(Math.random() * 4)] : limbs[(prev_limb + 1) % 4];
 
-    let colour = colours[Math.floor(Math.random() * 5)];
-    let limb = limbs[Math.floor(Math.random() * 4)];
+    prev_limb = limbs.indexOf(limb);
+
+    console.log(colour, limb);
 
     if (result) {
         result.textContent = limb + " " + colour;
