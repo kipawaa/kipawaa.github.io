@@ -86,11 +86,14 @@ function getPhi(num=null) {
         var result = document.getElementById('result');
     }
 
-    var total = 0;
+    decomp = getPrimeDecomposition(num);
 
-    for (var i = 2; i < num; i++) {
-        if (num % i != 0) total ++;
-    }
+    var total = 1;
+
+    [...new Set(decomp)].forEach(prime => {
+        const count = decomp.filter(x => x===prime).length;
+        total *= prime ** count - prime ** (count - 1);
+    });
 
     if (result) result.textContent = "\u03C6(" + num + ") = " + total;
     return total;
