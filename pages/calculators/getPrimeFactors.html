@@ -2,35 +2,30 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
-        <script type = "text/javascript" src = "../../js/calculators.js"></script>
+        <script type="text/javascript" src="../../scripts/calculators.js"></script>
         <title>kipawaa.io - Prime Factors Calculator</title>
+        <html lang="en"> 
+        <link rel="stylesheet" href="../../css/darkmode.css">
     </head>
-
-    <html lang = "en"> 
-    <link rel = "stylesheet" href = "../../css/darkmode.css">
-    
     <body>
-
-        <div class = "sidenav">
-            <a href = "../../index.html">Home Page</a>
-            <a href = "../projects.html">Projects</a>
-            <a href = "../classes.html">Classes</a>
-            <a href = "../calculators.html">Calculators</a>
-            <a href = "../about.html">About</a>
-            <a href = "../contact.html">Contact</a>
+        <div class="sidenav">
+            <a href="../../index.html">Home Page</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../classes.html">Classes</a>
+            <a href="../calculators.html">Calculators</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
         </div>
 
-        <div class = "main">
+        <div class="main">
             <h1>Prime Factors calculator</h1>
-            <form onsubmit = "return false">
-                <label for = "num">Input a number to find its prime factors!</label>
-                <input type = "text" id = "num" name = "num">
-                <button type = "submit" onclick = "getPrimeFactors()">Check!</button>
+            <form onsubmit="return false">
+                <label for="num">Input a number to find its prime factors!</label>
+                <input type="text" id="num" name="num">
+                <button type="submit" onclick="getPrimeFactors()">Check!</button>
             </form>
-            <p id = "result">Result: </p>
+            <p id="result">Result: </p>
             <p>This calculator determines the prime factors of a number <i>n</i>. The prime factors of a number <i>n</i> are numbers between 0 and <i>n</i> that are both prime, and divide <i>n</i>.</p>
         </div>
-
-
     </body>
 </html>
