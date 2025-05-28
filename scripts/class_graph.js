@@ -10,6 +10,8 @@ var svg = main
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
 
+var defs = svg.append("defs");
+
 var group = svg
     .append("g");
 
@@ -31,10 +33,22 @@ function getSchoolLabelColour(school) {
     return "#000000";
 }
 
-d3.json("../data/classes.json").then((data) => {
-    main.innerHTML = "";
-    console.log(data);
+function getNodeBorderColour(topic) {
+    if (topic === "algebra") return "";
+    if (topic === "analysis") return "";
+    if (topic === "calculus") return "";
+    if (topic === "combinatorics") return "";
+    if (topic === "logic") return "";
+    if (topic === "cryptography") return "fuchsia";
+    if (topic === "quantum") return "aqua";
+    if (topic === "cs") return "lime";
+    if (topic === "statistics") return "";
+    if (topic === "topology") return "";
+    if (topic === "geometry") return "";
+    if (topic === "number theory") return "purple";
+}
 
+d3.json("../data/classes.json").then((data) => {
     var link = group
         .selectAll(".link")
         .data(data.links)
@@ -47,15 +61,19 @@ d3.json("../data/classes.json").then((data) => {
         .join("circle")
             .attr("class", "node")
             .attr("r", NODE_RADIUS)
-            .attr("fill", d => getSchoolNodeColour(d.school));
+            .attr("fill", d => getSchoolNodeColour(d.school))
+            .attr("stroke-width", "2px")
+            .attr("stroke", d => getNodeBorderColour(d.topic))
+        .on("click", nodeClick);
 
     var label = group
         .selectAll("text")
         .data(data.nodes)
         .join("text")
         .text(d => d.id)
-        .attr("class", "nodelabel")
-        .attr("fill", d => getSchoolLabelColour(d.school));
+            .attr("class", "nodelabel")
+            .attr("fill", d => getSchoolLabelColour(d.school))
+        .on("click", nodeClick);
     
     var simulation = d3.forceSimulation(data.nodes)
         .force("charge", d3.forceManyBody()
@@ -81,6 +99,10 @@ d3.json("../data/classes.json").then((data) => {
         .on("start", dragStart)
         .on("drag", dragged)
         .on("end", dragEnd));
+
+    function nodeClick(event) {
+        return;
+    }
 
     function dragStart(event) {
         simulation.alphaTarget(0.5).restart();
