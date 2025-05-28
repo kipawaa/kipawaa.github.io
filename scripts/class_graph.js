@@ -2,11 +2,14 @@ const NODE_RADIUS = 30;
 const WIDTH = 1600;
 const HEIGHT = 900
 
+
 var main = d3.select(".main");
+
 var svg = main
     .append("svg")
         .attr("width", WIDTH)
         .attr("height", HEIGHT);
+
 var group = svg
     .append("g");
 
@@ -14,14 +17,14 @@ svg.call(d3.zoom().on("zoom", (event) => {
     group.attr("transform", event.transform);
 }));
 
-function get_school_node_color(school) {
+function getSchoolNodeColour(school) {
     if (school === "UTSC") return "#002A5C";
     if (school === "UO") return "#8F001A";
     if (school === "Carleton") return "#E91C24";
     return "#000000";
 }
 
-function get_school_label_color(school) {
+function getSchoolLabelColour(school) {
     if (school === "UTSC") return "#FFFFFF";
     if (school === "UO") return "#FFFFFF";
     if (school === "Carleton") return "#000000";
@@ -42,9 +45,9 @@ d3.json("../data/classes.json").then((data) => {
         .selectAll(".node")
         .data(data.nodes)
         .join("circle")
-        .attr("class", "node")
-        .attr("r", NODE_RADIUS)
-        .attr("fill", d => get_school_node_color(d.school));
+            .attr("class", "node")
+            .attr("r", NODE_RADIUS)
+            .attr("fill", d => getSchoolNodeColour(d.school));
 
     var label = group
         .selectAll("text")
@@ -52,7 +55,7 @@ d3.json("../data/classes.json").then((data) => {
         .join("text")
         .text(d => d.id)
         .attr("class", "nodelabel")
-        .attr("fill", d => get_school_label_color(d.school));
+        .attr("fill", d => getSchoolLabelColour(d.school));
     
     var simulation = d3.forceSimulation(data.nodes)
         .force("charge", d3.forceManyBody()
@@ -67,8 +70,8 @@ d3.json("../data/classes.json").then((data) => {
         .alphaDecay(0.005)
         .alphaTarget(0.3)
         .on("tick", ticked);
-    
-    // add drag for nodes
+
+    // add drag utility
     node.call(d3.drag()
         .on("start", dragStart)
         .on("drag", dragged)
